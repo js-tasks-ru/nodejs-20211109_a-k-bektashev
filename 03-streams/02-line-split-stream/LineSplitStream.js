@@ -18,6 +18,7 @@ class LineSplitStream extends stream.Transform {
 
   _flush(callback) {
     this.push(this.store);
+    this.store = "";
     return callback();
   }
 }
